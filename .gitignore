@@ -44,7 +44,6 @@ Builds/
 JuceLibraryCode/modules/
 *.vst3
 .DS_Store
-Images/
 Releases/
 
 !Source/Essentia/*.exe
