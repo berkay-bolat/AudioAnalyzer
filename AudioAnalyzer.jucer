@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="m0wGQm" name="AudioAnalyzer" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" pluginFormats="buildAAX,buildAU,buildStandalone,buildVST3"
+              pluginName="AudioAnalyzer" companyName="Berkay Bolat" companyCopyright="Copyright (c) 2026 Berkay Bolat"
+              companyEmail="berkaybolat2034@gmail.com" bundleIdentifier="com.BerkayBolat.AudioAnalyzer"
+              pluginManufacturerCode="BeBo" pluginCode="AuAn" pluginManufacturer="Berkay Bolat"
+              pluginDesc="AudioAnalyzer" pluginAUExportPrefix="AudioAnalyzerAU"
+              aaxIdentifier="com.BerkayBolat.AudioAnalyzer" pluginVST3Category="Analyzer"
+              pluginAAXCategory="8192" pluginVSTCategory="kPlugCategAnalysis"
+              companyWebsite="www.github.com/berkay-bolat" pluginAUMainType="'aufx'"
+              defines="SOUNDTOUCH_FLOAT_SAMPLES=1">
+  <MAINGROUP id="h3L73s" name="AudioAnalyzer">
+    <GROUP id="{8B158841-7D08-1B61-8708-56FE90F5CAE8}" name="Source">
+      <GROUP id="{C0C83959-3CB0-FCA9-0DB5-0C25E55E5500}" name="Essentia">
+        <FILE id="OPEKRP" name="essentia_streaming_key.exe" compile="0" resource="1"
+              file="Source/Essentia/essentia_streaming_key.exe"/>
+        <FILE id="tBISKK" name="essentia_streaming_rhythmextractor_multifeature.exe"
+              compile="0" resource="1" file="Source/Essentia/essentia_streaming_rhythmextractor_multifeature.exe"/>
+      </GROUP>
+      <GROUP id="{E464B833-0F7D-ECA9-EEAE-15DDE2556508}" name="libebur128">
+        <GROUP id="{40B023D7-A865-2C80-5A07-07D745525292}" name="queue">
+          <GROUP id="{5E66EC0C-98B3-4465-181C-69623D9CE7E9}" name="sys">
+            <FILE id="ix01JQ" name="queue.h" compile="0" resource="0" file="Source/libebur128/queue/sys/queue.h"/>
+          </GROUP>
+        </GROUP>
+        <FILE id="k7TnhF" name="ebur128.c" compile="1" resource="0" file="Source/libebur128/ebur128.c"/>
+        <FILE id="XO6msx" name="ebur128.h" compile="0" resource="0" file="Source/libebur128/ebur128.h"/>
+      </GROUP>
+      <FILE id="I68q5n" name="AnalysisEngine.h" compile="0" resource="0"
+            file="Source/AnalysisEngine.h"/>
+      <FILE id="s3WDC5" name="AnalysisPrep.h" compile="0" resource="0" file="Source/AnalysisPrep.h"/>
+      <FILE id="Wr0AHx" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="EsN1Xm" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="Y0vYWO" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="wBdnzf" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="yJFWVL" name="SpectrumAnalyzer.h" compile="0" resource="0"
+            file="Source/SpectrumAnalyzer.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors_headless" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <VS2026 targetFolder="Builds/VisualStudio2026">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="0" name="Debug" targetName="AudioAnalyzer" headerPath="../../Source/libebur128"
+                       libraryPath="../../Source/libebur128"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="AudioAnalyzer" libraryPath="../../Source/libebur128"
+                       headerPath="../../Source/libebur128"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors_headless" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_dsp" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="C:/JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2026>
+  </EXPORTFORMATS>
+</JUCERPROJECT>
