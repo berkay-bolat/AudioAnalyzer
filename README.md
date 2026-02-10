@@ -6,7 +6,7 @@ An audio analysis application that analyzes the duration, BPM, key, Camelot, lou
 
 ## KEY FEATURES
 
-### Advanced Spectrum Analyzer
+#### Advanced Spectrum Analyzer
 
 High-Resolution FFT: Uses a 16,384-point FFT window for precise frequency analysis.
 
@@ -18,7 +18,7 @@ Pixel-Perfect Rendering: Custom-drawn grid and frequency response curves using J
 
 Hover Effect: Easily track any frequency and dB value over the grid.
 
-### Loudness Metering (libebur128)
+#### Loudness Metering (libebur128)
 
 Integrated LUFS: Measures the overall loudness of the track.
 
@@ -28,7 +28,7 @@ Dynamics Analysis: Calculates PLR (Peak-to-Loudness Ratio) and Loudness Range (L
 
 Momentary & Short-Term Max: Monitors loudness fluctuations.
 
-### Music Information Retrieval (essentia)
+#### Music Information Retrieval (essentia)
 
 BPM Detection: Accurate tempo estimation with confidence scoring via efficient pre-processing.
 
@@ -40,20 +40,20 @@ Camelot Wheel Notation: Automatically converts musical keys to Camelot notation 
 
 This project demonstrates advanced C++ and JUCE techniques:
 
-### Hybrid Analysis Engine (Multi-threading)
+#### Hybrid Analysis Engine (Multi-threading)
 
 The plugin uses a dual-threaded approach to ensure the UI remains responsive:
 
  - Real-Time Thread: Handles audio buffer processing, FFT calculations, and UI painting.
  - Background Thread: Handles heavy offline analysis (Loudness, BPM, Key) asynchronously.
 
-### Embedded External Tools (Portable App/Plugin)
+#### Embedded External Tools (Portable App/Plugin)
 
 To ensure the plugin works on any machine without requiring the user to install Python or any external libraries:
 
  - The Essentia CLI tools are embedded directly into the plugin binary using JUCE's BinaryData. At runtime, the plugin checks if these tools exist in the user's AppData folder. If not, it extracts them automatically. The app/plugin communicates with these tools and parses their standard output.
 
-### Clean Architecture
+#### Clean Architecture
 
  - AnalysisEngine: Handles the logic for BPM/key detection, loudness calculation and external process management.
  - SpectrumAnalyzer: A self-contained component responsible for FFT signal processing and graphical rendering.
@@ -66,7 +66,7 @@ To ensure the plugin works on any machine without requiring the user to install 
  3. If you want to use as a plugin, copy the AudioAnalyzer.vst3 file to your system's VST3 folder.
  4. Rescan plugins in your DAW.
 
-Building From The Source Code
+#### Building From The Source Code
 
 If you want to build the plugin from the source code:
 
@@ -79,7 +79,7 @@ Steps:
 
  1. Clone this repository:
 
-<pre> ```bash git clone https://github.com/berkay-bolat/AudioAnalyzer.git``` </pre>
+<pre> git clone https://github.com/berkay-bolat/AudioAnalyzer.git </pre>
 
  2. Open the AudioAnalyzer.jucer file with the Projucer.
  3. Ensure the suitable (2022 or above) "Visual Studio" exporter is selected.
