@@ -44,7 +44,8 @@ Builds/
 JuceLibraryCode/modules/
 *.vst3
 .DS_Store
-*.png
+Images/
+Releases/
 
 !Source/Essentia/*.exe
 !Source/Essentia/essentia_streaming_key.exe

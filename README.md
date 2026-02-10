@@ -4,6 +4,8 @@ AUDIO ANALYZER
 
 An audio analysis application that analyzes the duration, BPM, key, Camelot, loudness (RMS/LUFS), frequency spectrum (mid/side/stereo) and chord information/data of an uploaded audio file, and presents the results to the user; usable both as a standalone application and as a VST plugin within DAWs.
 
+![Spectrum Analyzer](images/spectrum.png)
+
 ## KEY FEATURES
 
 #### Advanced Spectrum Analyzer
@@ -62,8 +64,8 @@ To ensure the plugin works on any machine without requiring the user to install 
 ## Installation
 
  1. Download the latest release (available in the Releases section).
- 2. You can directly use AudioAnalyzer.exe as a standalone application. 
- 3. If you want to use as a plugin, copy the AudioAnalyzer.vst3 file to your system's VST3 folder.
+ 2. You can directly use AudioAnalyzer.exe (in the "Standalone Application" folder) as a standalone application. 
+ 3. If you want to use as a plugin, copy the AudioAnalyzer.vst3 (in the "VST3 Plugin" folder) file to your system's VST3 folder.
  4. Rescan plugins in your DAW.
 
 #### Building From The Source Code
