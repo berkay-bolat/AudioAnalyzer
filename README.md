@@ -66,7 +66,7 @@ To ensure the plugin works on any machine without requiring the user to install 
  3. If you want to use as a plugin, copy the AudioAnalyzer.vst3 file to your system's VST3 folder.
  4. Rescan plugins in your DAW.
 
-### Building From The Source Code
+Building From The Source Code
 
 If you want to build the plugin from the source code:
 
@@ -79,7 +79,7 @@ Steps:
 
  1. Clone this repository:
 
- '''git clone https://github.com/berkay-bolat/AudioAnalyzer.git'''
+<pre> ```bash git clone https://github.com/berkay-bolat/AudioAnalyzer.git``` </pre>
 
  2. Open the AudioAnalyzer.jucer file with the Projucer.
  3. Ensure the suitable (2022 or above) "Visual Studio" exporter is selected.
